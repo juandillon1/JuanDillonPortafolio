@@ -1,0 +1,34 @@
+<div align="center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light backc">
+        <!-- Navbar content -->
+        <img src="../../../assets/images/Logo.gif" class="img-thumbnail border-0" width="15%" height="15%" style="background-color: transparent;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item fuente">
+                    <a class="nav-link" routerLink="/inicio" name="inicio" routerLinkActive="active" [ngClass]="{'animate__animated animate__bounceIn': botones1}" (click)="cambiaclase(true, 'inicio')">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item fuente">
+                    <a class="nav-link" routerLink="/proyectos" routerLinkActive="active" [ngClass]="{'animate__animated animate__bounceIn': botones3}" (click)="cambiaclase(true, 'proyectos')">Proyectos</a>
+                </li>
+                <li class="nav-item fuente">
+                    <a class="nav-link" routerLink="/sobremi" routerLinkActive="active" [ngClass]="{'animate__animated animate__bounceIn': botones2}" (click)="cambiaclase(true, 'quiensoy')">¿Quién Soy?</a>
+                </li>
+                <li class="nav-item dropdown fuente">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Más...
+                </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item fuente" href="#">Experiencias</a>
+                        <a class="dropdown-item fuente" routerLink="/fichatecnica">Ficha Técnica</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item fuente" href="#">Contacto</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

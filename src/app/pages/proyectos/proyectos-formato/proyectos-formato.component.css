@@ -1,0 +1,41 @@
+.head {
+    position:relative;
+    display:inline-block;
+}
+.estado{
+    position: absolute;
+    right:-20px;
+    text-align: center;
+    top: 10%;
+    right: -2%;
+    font-size: 100%;
+    color: white;
+}
+.estadobottom{
+    position: absolute;
+    right:-20px;
+    text-align: center;
+    top: 85%;
+    right: -2%;
+    font-size: 100%;
+    color: white;
+}
+.volver{
+    margin-left: 50%;
+    font-size: large;
+}
+.derecha{
+    float: right;
+}
+.visualizaciones {
+    /* color: rgba(255, 255, 255, 0.2); */
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    padding: 5px;
+}
+
+.likes {
+    color: rgb(255, 28, 28);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    margin-left: 4px;
+    padding: 5px;
+}

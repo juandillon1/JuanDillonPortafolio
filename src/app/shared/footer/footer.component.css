@@ -1,0 +1,16 @@
+.colorbg {
+    color: #ccc;
+}
+
+.s {
+    font-size: x-large;
+}
+
+.font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.cover:hover {
+    color: #16222A;
+    text-decoration: none;
+}

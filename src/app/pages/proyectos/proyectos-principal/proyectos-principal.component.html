@@ -1,0 +1,27 @@
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <div class="card-body">
+            <img [src]="img" [ngStyle]="{'width': lenguaje=='Angular+9' ? '': '100%', 'height': lenguaje=='Angular+9' ? '': '100%'}" alt="">
+        </div>
+        </div>
+        <div class="flip-card-back">
+            <div>
+                <h1>Proyectos En:</h1>
+                <span [ngClass]="devuelveBadge(lenguaje) ? clase : ''">{{lenguaje}}</span>
+                <p><b>{{lenguaje}}</b> {{descripcion}}</p>
+                <iframe
+                [width]="tamanoiframe.width" [height]="tamanoiframe.height"
+                [src]="explicacion | safeImage: 'urlsource'"
+                frameborder="0"
+                    allow="accelerometer;
+                    autoplay; 
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture"
+                allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</div>

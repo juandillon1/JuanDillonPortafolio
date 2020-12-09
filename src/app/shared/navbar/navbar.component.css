@@ -1,0 +1,15 @@
+.backc {
+    background-color: #fff !important;
+}
+
+.fuente {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 50px;
+    padding: 0 30px;
+    text-transform: uppercase;
+}

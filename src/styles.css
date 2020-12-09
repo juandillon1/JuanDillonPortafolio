@@ -1,0 +1,15 @@
+.pointer {
+    pointer-events: none;
+}
+
+.hrcentrado {
+    width: 50%;
+    text-align: center;
+}
+
+.hrcentrado2 {
+    width: 60%;
+}
+.mano{
+    cursor: pointer;
+}
