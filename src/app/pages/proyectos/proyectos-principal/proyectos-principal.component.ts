@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import {DomSanitizer} from '@angular/platform-browser';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-proyectos-principal',
@@ -11,9 +10,9 @@ export class ProyectosPrincipalComponent implements OnInit {
   @Input() img: string;
   @Input() lenguaje: string;
   @Input() descripcion: string;
+  @Input() urlCurso: string;
   @Input() explicacion: string;
   @Input() tamanoimg: Tamanoimg;
-  @Input() tamanoiframe: Tamanoiframe;
 
   clase = '';
 
@@ -43,13 +42,11 @@ export class ProyectosPrincipalComponent implements OnInit {
 
     }
   }
+  irAlCurso() {
+    window.open(this.urlCurso, '_blank');
+  }
 }
-
 declare interface Tamanoimg{
-  width: string;
-  height: string;
-}
-declare interface Tamanoiframe{
   width: string;
   height: string;
 }

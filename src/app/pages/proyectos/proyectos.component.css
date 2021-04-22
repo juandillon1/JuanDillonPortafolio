@@ -1,12 +1,3 @@
-.margin-right{
-  margin-left: 5%;
-  margin-right: 10px;
-}
-.borde{
-  border: #ccc solid 1px;
-  border-radius: 1rem;
-}
-
 .pointer {
     pointer-events: none;
 }
@@ -15,4 +6,8 @@
     background-color: black;
     padding: 5%;
     pointer-events: none;
+}
+.volver{
+  margin-left: 45%;
+  font-size: large;
 }

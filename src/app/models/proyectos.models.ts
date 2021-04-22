@@ -1,5 +1,5 @@
 export interface Proyecto{
-    nombre: string;
+    titulo: string;
     img: string;
     detalle: string;
     autor: string;

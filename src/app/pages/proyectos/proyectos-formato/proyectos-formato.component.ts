@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterContentInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Proyecto } from '../../../models/proyectos.models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-proyectos-formato',
@@ -12,11 +13,17 @@ export class ProyectosFormatoComponent implements OnInit {
   // Defino los Inputs
   @Input() Titulo;
   @Input() Proyectos: Proyecto[];
+  proyecto;
+  mostrarProyecto = false;
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.Proyectos)
   }
+  setProyecto(proyecto) {
+    this.proyecto = proyecto;
+    this.mostrarProyecto = true;
+  }
+
   volver(){
     this.proyectoexit.emit(false);
   }

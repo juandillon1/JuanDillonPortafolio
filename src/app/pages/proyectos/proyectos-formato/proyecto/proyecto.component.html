@@ -1,0 +1,29 @@
+<div class="row mb-3">
+  <div class="col" id="div1">
+    <h1>Proyecto:</h1>
+    <h2 align="center" class="titulo">{{Proyecto.titulo}}</h2>
+    <hr>
+    <div>
+      <img [src]="Proyecto.img | imagen:'proyecto'" alt="" class="img-fluid">
+      <span class="sobreimgv">
+        <i class="fas fa-eye visualizaciones"></i> {{Proyecto.visualizaciones}}
+        <i class="fas fa-heart likes pointer ml-1"></i> {{Proyecto.likes}}
+      </span>
+    </div>
+  </div>
+  <div class="col animate__animated animate__fadeIn" align="center">
+    <div>
+      <h2>¿Te gustó el proyecto? Dale al botón de me gusta.</h2>
+      <img src="https://i.ibb.co/b7nVL1m/like.png" (click)="darLike(true)" [ngClass]="{'animate__animated animate__bounceIn': botones1}" class="mano">
+    </div>
+    <div id="div2">
+      <a [href]="'http://' + Proyecto.urlfirebase" target="_blank">
+        <img src="https://i.ibb.co/xDJcF2X/Logo-Sitio-Web.png" class="img-thumbnail" alt="">
+      </a>
+      <a [href]="'http://' + Proyecto.urlgit" target="_blank" class="ml-3">
+        <img src="https://i.ibb.co/BjK0pQS/Git-Hub-Mark-64px.png" class="img-thumbnail" alt="">
+      </a>
+      <p class="parrafo">{{Proyecto.detalle}}</p>
+    </div>
+  </div>
+</div>

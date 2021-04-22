@@ -9,6 +9,12 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FichatecnicaComponent } from './fichatecnica/fichatecnica.component';
 import { ProyectosModule } from './proyectos/proyectos.module';
 import { PipesModule } from '../pipes/pipes.module';
+import { ContactoComponent } from './contacto/contacto.component';
+import { FormcontactoComponent } from './contacto/formcontacto/formcontacto.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CVComponent } from './cv/cv.component';
+
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -18,7 +24,9 @@ import { PipesModule } from '../pipes/pipes.module';
         CommonModule,
         PagesRoutingModule,
         ProyectosModule,
-        PipesModule
+        PipesModule,
+        NgxChartsModule,
+        ReactiveFormsModule,
     ],
     exports: [
         InicioComponent,
@@ -28,6 +36,9 @@ import { PipesModule } from '../pipes/pipes.module';
         SobremiComponent,
         ProyectosComponent,
         FichatecnicaComponent,
+        ContactoComponent,
+        FormcontactoComponent,
+        CVComponent,
     ],
     providers: [],
 })

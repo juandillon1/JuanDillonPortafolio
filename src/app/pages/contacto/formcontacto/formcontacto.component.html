@@ -1,0 +1,44 @@
+<form autocomplete="off" [formGroup]="body" (ngSubmit)="guardar()">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="form-group row">
+            <label class="col-2 col-form-label">Nombre</label>
+            <div class="col">
+                <input class="form-control" type="text" placeholder="Tu nombre" formControlName="nombre">
+                <span *ngIf="nombreValido" class="text-danger pointer">Ingrese al menos 3 letras</span>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-2 col-form-label">Correo Electrónico</label>
+            <div class="col">
+                <input class="form-control" type="text" placeholder="Tu Correo" formControlName="correo">
+                <span *ngIf="correoValido" class="text-danger pointer">Ingrese un correo válido</span>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-2 col-form-label">Motivo</label>
+            <div class="col">
+                <textarea  type="text" placeholder="¿Por qué querés contactarme?" class="form-control" formControlName="motivo"></textarea>
+                <span *ngIf="motivoValido" class="text-danger pointer">Ingrese al menos 5 letras</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-success m-3">Enviar</button>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+          <div class="card-body">
+            <h3>También podés hablarme por estas Redes:</h3>
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/juancruzdillon/" target="_blank"><i class="fab fa-linkedin-in mr-3 icons img-thumbnail"></i></a>
+              <a href="https://www.instagram.com/juandillon_/" target="_blank"><i class="fab fa-instagram mr-3 icons img-thumbnail"></i></a>
+              <a href="https://api.whatsapp.com/send?phone=5491164602693&text=Hola%20Juan%20%F0%9F%99%82!%20Quisiera%20contactarte%20porque..." target="_blank"><i class="fab fa-whatsapp mr-3 icons img-thumbnail"></i></a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</form>

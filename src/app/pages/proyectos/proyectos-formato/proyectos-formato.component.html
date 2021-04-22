@@ -1,27 +1,30 @@
-<div class="container">
-    <h1>{{Titulo}}</h1>
-    <div class="card-columns">
-        <div class="card mano" *ngFor="let proyecto of Proyectos">
-            <div class="head">
-                <img [src]="proyecto.img" class="card-img-top" alt="...">
-                <span class="badge badge-success estado pointer" *ngIf="proyecto.estado=='F'">Finalizado</span>
-                <span class="badge badge-warning estado pointer" *ngIf="proyecto.estado=='EP'">En Proceso</span>
-                <span class="badge badge-danger estado pointer" *ngIf="proyecto.estado=='A'">En Pausa</span>
-                <span class="badge badge-success estadobottom pointer" *ngIf="proyecto.estado=='F'">Cocinado al %{{proyecto.porcentaje}}</span>
-                <span class="badge badge-warning estadobottom pointer" *ngIf="proyecto.estado=='EP'">Cocinado al %{{proyecto.porcentaje}}</span>
-                <span class="badge badge-danger estadobottom pointer" *ngIf="proyecto.estado=='A'">Cocinado al %{{proyecto.porcentaje}}</span>
-            </div>
-          <div class="card-body">
-            <div class="derecha pointer">
-              <span><i class="fas fa-eye visualizaciones"></i>{{proyecto.visualizaciones}}</span>
-              <span><i class="fas fa-heart likes pointer"></i>{{proyecto.likes}}</span>
-
-            </div>
-            <h5 class="card-title">{{proyecto.nombre}}</h5>
-            <p class="card-text">{{proyecto.detalle}}</p>
-            <small>Autor: {{proyecto.autor}}</small>
+<div class="container animate__animated animate__fadeIn">
+  <h1>{{Titulo}}</h1>
+  <p *ngIf="Proyectos?.length === 0">Aún no hay proyectos en este lenguaje</p>
+  <app-proyecto *ngIf="mostrarProyecto" [Proyecto]="proyecto"></app-proyecto>
+  <div class="card-columns" *ngIf="!mostrarProyecto">
+      <div class="card mano zoom" *ngFor="let proyecto of Proyectos" (click)="setProyecto(proyecto)">
+          <div class="head">
+              <img [src]="proyecto.img | imagen:'proyecto'" class="card-img-top" alt="...">
+              <span class="badge badge-success estado pointer" *ngIf="proyecto.estado=='F'">Finalizado</span>
+              <span class="badge badge-warning estado pointer" *ngIf="proyecto.estado=='EP'">En Proceso</span>
+              <span class="badge badge-danger estado pointer" *ngIf="proyecto.estado=='A'">En Pausa</span>
+              <span class="badge badge-success estadobottom pointer" *ngIf="proyecto.estado=='F'">Cocinado al %{{proyecto.porcentaje}}</span>
+              <span class="badge badge-warning estadobottom pointer" *ngIf="proyecto.estado=='EP'">Cocinado al %{{proyecto.porcentaje}}</span>
+              <span class="badge badge-danger estadobottom pointer" *ngIf="proyecto.estado=='A'">Cocinado al %{{proyecto.porcentaje}}</span>
           </div>
+        <div class="card-body">
+          <div class="derecha pointer">
+            <span><i class="fas fa-eye visualizaciones"></i>{{proyecto.visualizaciones}}</span>
+            <span><i class="fas fa-heart likes pointer"></i>{{proyecto.likes}}</span>
+
+          </div>
+          <h2 class="card-title">{{proyecto.titulo}}</h2>
+          <hr>
+          <p class="card-text">{{proyecto.detalle}}</p>
+          <small>Autor: {{proyecto.autor}}</small>
         </div>
-    </div>
-    <button class="btn btn-danger mt-1 volver" (click)="volver()">Volver</button>
+      </div>
+  </div>
+  <button class="btn btn-danger mt-1 volver" (click)="volver()">Volver</button>
 </div>

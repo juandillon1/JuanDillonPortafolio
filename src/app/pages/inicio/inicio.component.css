@@ -1,3 +1,4 @@
+/* Custom Inicio */
 .cvtext {
     font-size: 65%;
     font-weight: 400;
@@ -31,4 +32,28 @@
     color: rgb(255, 28, 28);
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
     padding-right: 5px;
+}
+
+.titulo{
+  position: absolute;
+  display: block;
+  text-align: center;
+  top: 55%;
+  font-size: 150%;
+  float: left;
+  z-index: 1;
+  padding: 2%;
+  /* background: rgba(0, 0, 0, 0.75); */
+  opacity: 0.8;
+  color: white;
+  pointer-events: none;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+}
+
+@media only screen and (max-width: 768px){
+  .view{
+    right: 35%;
+  }
 }

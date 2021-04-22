@@ -1,4 +1,4 @@
-<div class="flip-card">
+<div class="flip-card margin-right borde mt-3 animate__animated animate__fadeIn">
     <div class="flip-card-inner">
         <div class="flip-card-front">
         <div class="card-body">
@@ -9,18 +9,9 @@
             <div>
                 <h1>Proyectos En:</h1>
                 <span [ngClass]="devuelveBadge(lenguaje) ? clase : ''">{{lenguaje}}</span>
-                <p><b>{{lenguaje}}</b> {{descripcion}}</p>
-                <iframe
-                [width]="tamanoiframe.width" [height]="tamanoiframe.height"
-                [src]="explicacion | safeImage: 'urlsource'"
-                frameborder="0"
-                    allow="accelerometer;
-                    autoplay; 
-                    encrypted-media;
-                    gyroscope;
-                    picture-in-picture"
-                allowfullscreen
-                ></iframe>
+                <p class="descripcion"><b>{{lenguaje}}</b> {{descripcion}}</p>
+                <h3><b>¿Querés aprender a programar en {{lenguaje}}?</b></h3>
+                <a (click)="irAlCurso()" class="btn btn-success linkcurso mt-5">Realiza este curso y convertite en programador {{lenguaje}}</a>
             </div>
         </div>
     </div>

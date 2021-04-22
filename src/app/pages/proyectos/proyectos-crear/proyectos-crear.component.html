@@ -1,0 +1,105 @@
+<div class="container">
+  <form autocomplete="off" [formGroup]="body" (ngSubmit)="guardar()">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title" align="center">Carga Proyectos <hr></h1>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Lenguaje</label>
+          <div class="col">
+              <select class="form-select" aria-label="Default select example" class="form-control" type="text" placeholder="Lenguaje" formControlName="lenguaje">
+                <option selected></option>
+                <option value="Angular">AngularJS</option>
+                <option value="ReactJS">ReactJS</option>
+                <option value="NodeJS">NodeJS</option>
+                <option value="Deno">Deno</option>
+              </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Estado</label>
+          <div class="col">
+            <select class="form-select form-control" aria-label="Default select example" type="text" placeholder="Estado" formControlName="estado">
+              <option selected></option>
+              <option value="EP">En proceso</option>
+              <option value="F">Terminado</option>
+              <option value="A">En Pausa</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Titulo</label>
+          <div class="col">
+              <input class="form-control" type="text" placeholder="Titulo" formControlName="titulo">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Autor</label>
+          <div class="col">
+              <input class="form-control" type="text" placeholder="Autor" formControlName="autor">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Fecha Creación</label>
+          <div class="col">
+              <input class="form-control" type="date" formControlName="fechaCreacion">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Porcentaje</label>
+          <div class="col">
+              <input class="form-control" type="number" placeholder="0 a 100" formControlName="porcentaje">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">URL GIT</label>
+          <div class="col">
+              <input class="form-control" type="text" placeholder="http://localhost.com" formControlName="urlgit">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">URL FIREBASE</label>
+          <div class="col">
+              <input class="form-control" type="text" placeholder="http://localhost.com" formControlName="urlfirebase">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Imagen</label>
+          <div class="col">
+              <input class="form-control" type="text" placeholder="http://localhost.com" formControlName="img">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Imagen 300px x 200px</label>
+          <div class="col">
+              <input class="form-control" type="text" placeholder="http://localhost.com" formControlName="imgrsize">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Descripción</label>
+          <div class="col">
+              <input class="form-control" type="text" placeholder="....." formControlName="detalle">
+              <!-- <small *ngIf="nombreValido" class="text-danger">Ingrese al menos 5 letras</small> -->
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-success">Insertar</button>
+    </div>
+  </form>
+  <hr>
+  <form autocomplete="off" (ngSubmit)="borrarProyecto(proyecto)" #proyecto="ngForm">
+    <h1 class="card-title" align="center">Borrar Proyectos <hr></h1>
+    <select class="form-control" aria-label="Default select example" placeholder="Proyectos" name="proyectoid" #proyectoid="ngModel" [ngModel]>
+      <option selected></option>
+      <option [value]="proyecto._id" *ngFor="let proyecto of proyectos">{{proyecto.titulo}} | {{proyecto.fechaCreacion}}</option>
+    </select>
+    <button class="btn btn-danger centrar mt-3" type="submit">Borrar</button>
+  </form>
+</div>

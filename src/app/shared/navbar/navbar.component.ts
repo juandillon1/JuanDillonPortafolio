@@ -11,7 +11,9 @@ export class NavbarComponent implements OnInit {
   botones2: boolean;
   botones3: boolean;
   botones4: boolean;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  botones5: boolean;
+  botones6: boolean;
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -32,6 +34,22 @@ export class NavbarComponent implements OnInit {
       }, 500);
     }
    }
+   if ( name === 'contacto') {
+    this.botones5 = r;
+    if ( r === this.botones5 )  {
+      setTimeout(() => {
+        return this.botones5 = false;
+      }, 500);
+    }
+   }
+   if ( name === 'cv') {
+    this.botones6 = r;
+    if ( r === this.botones6 )  {
+      setTimeout(() => {
+        return this.botones6 = false;
+      }, 500);
+    }
+   }
    if ( name === 'proyectos') {
     this.botones3 = r;
     if ( r === this.botones3 )  {
@@ -41,4 +59,5 @@ export class NavbarComponent implements OnInit {
     }
    }
   }
+
 }

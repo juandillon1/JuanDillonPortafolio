@@ -5,7 +5,7 @@
 	-ms-transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
 	transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
 }
-.view:hover .s3, 
+.view:hover .s3,
 .view:hover .s5{
 	-webkit-transform: translate3d(59px,0,0) rotate3d(0,1,0,90deg);
 	-moz-transform: translate3d(59px,0,0) rotate3d(0,1,0,90deg);

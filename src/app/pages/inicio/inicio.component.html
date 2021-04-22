@@ -1,40 +1,40 @@
-<div class="container">
-    <h1 class="pointer">Bienvenido/a
-        <small class="cvtext">Este es mi Portafolio</small>
+<div class="container animate__animated animate__fadeIn">
+    <h1 class="pointer">Bienvenid@
+        <small class="cvtext">Este es mi Portfolio</small>
     </h1>
     <p class="parrafo pointer">
-        En este portafolio vas a encontrar información sobre proyectos que hice o estoy haciendo, cómo también algunas cosas que puedan interesarte. <br>Un abrazo enorme y gracias por verlo!
+        En este portfolio vas a encontrar información sobre proyectos que hice o estoy haciendo, cómo también algunas cosas que puedan interesarte.
     </p>
-    <div class="row">
+    <div class="row" *ngIf="proyecto">
         <div class="col">
             <h1 class="pointer">Último Proyecto</h1>
             <div class="col">
                 <hr>
                 <div id="grid" class="">
                     <div class="view">
-                        <div class="view-back">
-                            <span><i class="fas fa-eye ojo"></i>566</span>
-                            <span><i class="fas fa-heart corazon"></i>124</span>
-
-                            <a routerLink="/proyectos" style="text-decoration: none;">&rarr;</a>
+                      <div class="view-back">
+                          <span><i class="fas fa-eye ojo"></i>{{proyecto.visualizaciones}}</span>
+                          <span><i class="fas fa-heart corazon"></i>{{proyecto.likes}}</span>
+                          <a [routerLink]="['/proyectos']" [queryParams]="{mostrar: true}" style="text-decoration: none;">&rarr;</a>
                         </div>
-                        <img src="../../../assets/cards/images/1.jpg" />
+                        <img [src]="proyecto.imgrsize" class="img-fluid"/>
+                        <p class="titulo">{{proyecto.titulo}}</p>
                     </div>
-                </div>
+                  </div>
             </div>
         </div>
         <div class="col">
             <h1 class="pointer">Cursos Recomendados</h1>
             <div class="col">
                 <hr>
-                <div id="grid2" class="">
+                <div id="grid2">
                     <div class="view">
                         <div class="view-back">
                             <span data-icon="A">566</span>
                             <span data-icon="B">124</span>
                             <a routerLink="/proyectos">&rarr;</a>
                         </div>
-                        <img src="../../../assets/cards/images/1.jpg" />
+                        <img src="https://i.ibb.co/kxXLjsx/unnamed-1.webp" class="img-fluid"/>
                     </div>
                 </div>
             </div>

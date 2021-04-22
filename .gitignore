@@ -46,3 +46,6 @@ testem.log
 Thumbs.db
 
 node_modules
+
+.firebase/*
+e2e/*

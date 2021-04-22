@@ -1,7 +1,9 @@
 <div align="center">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light backc">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
         <!-- Navbar content -->
-        <img src="../../../assets/images/Logo.gif" class="img-thumbnail border-0" width="15%" height="15%" style="background-color: transparent;">
+        <a routerLink="/inicio">
+          <img src="../../../assets/images/Logo.png" class="border-0" width="250px" height="250px" style="background-color: transparent;">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -14,20 +16,26 @@
                 <li class="nav-item fuente">
                     <a class="nav-link" routerLink="/proyectos" routerLinkActive="active" [ngClass]="{'animate__animated animate__bounceIn': botones3}" (click)="cambiaclase(true, 'proyectos')">Proyectos</a>
                 </li>
-                <li class="nav-item fuente">
+                <li class="nav-item fuente nomostrar">
                     <a class="nav-link" routerLink="/sobremi" routerLinkActive="active" [ngClass]="{'animate__animated animate__bounceIn': botones2}" (click)="cambiaclase(true, 'quiensoy')">¿Quién Soy?</a>
                 </li>
-                <li class="nav-item dropdown fuente">
+                <li class="nav-item fuente">
+                    <a class="nav-link" routerLink="/contacto" routerLinkActive="active" [ngClass]="{'animate__animated animate__bounceIn': botones5}" (click)="cambiaclase(true, 'contacto')">Contacto</a>
+                </li>
+                <li class="nav-item fuente">
+                    <a class="nav-link" routerLink="/cv" routerLinkActive="active" [ngClass]="{'animate__animated animate__bounceIn': botones6}" (click)="cambiaclase(true, 'cv')">C.V</a>
+                </li>
+                <!-- <li class="nav-item dropdown fuente">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Más...
                 </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item fuente" href="#">Experiencias</a>
-                        <a class="dropdown-item fuente" routerLink="/fichatecnica">Ficha Técnica</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item fuente" href="#">Contacto</a>
+                        <a class="dropdown-item nomostrar" href="#">Experiencias</a>
+                        <a class="dropdown-item nomostrar" routerLink="/fichatecnica">Ficha Técnica</a>
+                        <div class="dropdown-divider nomostrar"></div>
+                        <a class="dropdown-item fuente" routerLink="/contacto">Contacto</a>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>

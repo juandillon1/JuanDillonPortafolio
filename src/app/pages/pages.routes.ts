@@ -5,6 +5,10 @@ import { NopagefoundComponent } from '../shared/nopagefound/nopagefound.componen
 import { SobremiComponent } from './sobremi/sobremi.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FichatecnicaComponent } from './fichatecnica/fichatecnica.component';
+import { ProyectosCrearComponent } from './proyectos/proyectos-crear/proyectos-crear.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { ProyectoComponent } from './proyectos/proyectos-formato/proyecto/proyecto.component';
+import { CVComponent } from './cv/cv.component';
 
 const Pagesroutes: Routes = [
     {
@@ -23,9 +27,28 @@ const Pagesroutes: Routes = [
         data: {titulo: 'Proyectos'}
     },
     {
+      path: 'cargar',
+      component: ProyectosCrearComponent
+    },
+    {
         path: 'fichatecnica',
         component: FichatecnicaComponent,
         data: {titulo: 'Ficha Técnica'}
+    },
+    {
+        path: 'contacto',
+        component: ContactoComponent,
+        data: {titulo: 'Contacto'}
+    },
+    {
+        path: 'proyecto',
+        component: ProyectoComponent,
+        data: {titulo: 'Proyecto'}
+    },
+    {
+        path: 'cv',
+        component: CVComponent,
+        data: {titulo: 'C.V'}
     },
     {
         path: '',

@@ -1,0 +1,31 @@
+.titulo{
+  font-size: 3rem;
+  pointer-events: none;
+}
+#div2 {
+  margin-top: 20%;
+}
+
+.parrafo{
+  font-size: 1.5rem;
+}
+.sobreimgv{
+  position: absolute;
+  display: block;
+  text-align: center;
+  right: 5%;
+  top: 80%;
+  font-size: 100%;
+  z-index: 1;
+  padding: 2%;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0.6;
+  color: white;
+  pointer-events: none;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+}
+.likes{
+  color: red;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ProyectosService } from '../services/proyectos.service';
 
 @Component({
   selector: 'app-pages',
@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pages.component.css']
 })
 export class PagesComponent implements OnInit {
+
   constructor() {
   }
 
   ngOnInit(): void {
-    
   }
 
 }

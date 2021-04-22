@@ -1,37 +1,44 @@
-<div class="card">
-    <div class="card-body" id="titulo">
-        <div class="os-phrases" id="os-phrases">
-            <h2 class="subtitulo">ESTOS SON MIS PROYECTOS</h2>
-            <h2 class="subtitulo">DESCUBRILOS ABAJO ↓</h2>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="margin-right borde mt-3" *ngFor="let proyecto of ProyectosInfo">
-            <div (click)="mostrar(proyecto.info.lenguaje)" class="mano" *ngIf="!angular && !react && !node && !deno">
-                <app-proyectos-principal 
-                [img]="proyecto.info.img"
-                [lenguaje]="proyecto.info.lenguaje"
-                [descripcion]="proyecto.info.descripcion"
-                [explicacion]="proyecto.info.explicacion"
-                [tamanoimg]="proyecto.info.tamanoimg"
-                [tamanoiframe]="proyecto.info.tamanoiframe"></app-proyectos-principal>
-            </div>
-        </div> 
-        <!-- Muestro toda la info -->
-        <!-- Verifico si muestro o NO las pantallas de proyectos -->
-        <div *ngIf="angular">
+<app-proyecto  [Proyecto]="ultimoProyecto" *ngIf="mostrarUltimoProyecto" class="animate__animated animate__fadeIn"></app-proyecto>
+<button class="btn btn-danger mt-1 volver" (click)="volver()" *ngIf="mostrarUltimoProyecto">Volver</button>
+
+<div *ngIf="!mostrarUltimoProyecto" class="animate__animated animate__fadeIn">
+  <div class="card">
+      <div class="card-body" id="titulo">
+          <div class="os-phrases" id="os-phrases">
+              <h2 class="subtitulo">ESTOS SON MIS PROYECTOS</h2>
+              <h2 class="subtitulo">DESCUBRILOS ABAJO ↓</h2>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div *ngFor="let proyecto of ProyectosInfo" class="responsive">
+              <div (click)="mostrar(proyecto.lenguaje)" class="mano" *ngIf="!angular && !react && !node && !deno">
+                  <app-proyectos-principal
+                  [img]="proyecto.img"
+                  [lenguaje]="proyecto.lenguaje"
+                  [descripcion]="proyecto.descripcion"
+                  [urlCurso]="proyecto.urlCurso"
+                  [explicacion]="proyecto.explicacion"
+                  [tamanoimg]="proyecto.tamanoimg"
+                  ></app-proyectos-principal>
+              </div>
+          </div>
+          <!-- Muestro toda la info -->
+          <!-- Verifico si muestro o NO las pantallas de proyectos -->
+          <div *ngIf="angular">
             <app-proyectos-formato (proyectoexit)="mostrar('')" Titulo="Angular" [Proyectos]="ProyectosAngular"></app-proyectos-formato>
-        </div>
-        <div *ngIf="react">
+          </div>
+          <div *ngIf="react">
             <app-proyectos-formato (proyectoexit)="mostrar('')" Titulo="React" [Proyectos]="ProyectosReact"></app-proyectos-formato>
-        </div>
-        <div *ngIf="node">
+          </div>
+          <div *ngIf="node">
             <app-proyectos-formato (proyectoexit)="mostrar('')" Titulo="NodeJS" [Proyectos]="ProyectosNodeJS"></app-proyectos-formato>
-        </div>
-        <div *ngIf="deno">
+          </div>
+          <div *ngIf="deno">
             <app-proyectos-formato (proyectoexit)="mostrar('')" Titulo="Deno" [Proyectos]="ProyectosDeno"></app-proyectos-formato>
-        </div>
-    </div>
+          </div>
+      </div>
+  </div>
+
 </div>
